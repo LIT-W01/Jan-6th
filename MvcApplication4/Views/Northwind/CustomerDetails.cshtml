@@ -1,0 +1,44 @@
+﻿@using MvcApplication4.Models;
+@model Customer
+           
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+    <title></title>
+</head>
+<body>
+    <div class="container">
+        <table class="table table-hover table-striped table-bordered">
+            <tr>
+                <td>Company Name</td>
+                <td>@Model.CompanyName</td>
+            </tr>
+            <tr>
+                <td>Contact Name</td>
+                <td>@Model.ContactName</td>
+            </tr>
+            <tr>
+                <td>Contact Title</td>
+                <td>@Model.ContactTitle</td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td>@Model.Address</td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td>@Model.City</td>
+            </tr>
+            <tr>
+                <td>Region</td>
+                <td>@Model.Region</td>
+            </tr>
+            <tr>
+                <td>Fax</td>
+                <td>@Model.Fax</td>
+            </tr>
+
+        </table>
+    </div>
+</body>
+</html>

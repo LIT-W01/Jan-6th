@@ -1,0 +1,30 @@
+﻿@using MvcApplication4.Models;
+@model IEnumerable<Category>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+    <title></title>
+</head>
+<body>
+<div class="container">
+    <table class="table table-hover table-striped table-bordered">
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Products</th>
+        </tr>
+        @foreach (Category c in Model)
+        {
+            <tr>
+                <td>@c.Name</td>
+                <td>@c.Description</td>
+                <td>
+                    <a href="/northwind/products?categoryId=@c.Id">View Products</a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+﻿@using MvcApplication4.Models;
+@model IEnumerable<Product>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+    <title></title>
+</head>
+<body>
+    <div class="container">
+        <table class="table table-hover table-striped table-bordered">
+            <tr>
+                <th>Name</th>
+                <th>Quantity Per Unit</th>
+                <th>Unit Price</th>
+            </tr>
+            @foreach (Product p in Model)
+            {
+                <tr>
+                    <td>@p.Name</td>
+                    <td>@p.QuantityPerUnit</td>
+                    <td>
+                        @p.UnitPrice
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>
